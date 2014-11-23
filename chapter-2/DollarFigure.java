@@ -20,7 +20,7 @@ public class DollarFigure {
       }
 			
       for (int j = 1; j <= 7 - i; j++) {
-	 System.out.print("$");
+	  System.out.print("$");
       }
 			
       for (int j = 1; j <= 14 - 2 * i; j++) {
