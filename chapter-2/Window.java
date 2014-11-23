@@ -15,7 +15,7 @@
 */
 
 public class Window {
-  public static final int size = 6;
+	public static final int size = 6;
 	public static void main(String[] args) {
 		line();
 		verticalLine();
