@@ -5,9 +5,7 @@
 * names. Your method should compute the absolute difference between the 
 * sum of the boys' integers and the sum of the girls' integers. The input
 * could end with either a boy or girl; you may not assume that it contains 
-* an even number of names. If the input file tas.txt contains the following text:
-*
-* Steve 3 Sylvia 7 Craig 14 Lisa 13 Brian 4 Charlotte 9 Jordan 6
+* an even number of names. 
 */
 
 public static void boyGirl(Scanner console) {
