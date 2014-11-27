@@ -44,5 +44,6 @@ public static int mostCommonNames(Scanner input) {
         }
         System.out.println("Most common: " + commonWord);
     }
+    
     return uniqueName;
 }
