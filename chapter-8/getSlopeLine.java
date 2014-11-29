@@ -1,5 +1,5 @@
 /*
-* Add the following method to your Line class from the previous exercise:
+* Add the following method to your Line class:
 * 
 * public double getSlope()
 * 
