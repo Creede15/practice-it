@@ -1,6 +1,7 @@
 /*
 * Write a method starString that accepts an integer parameter n and 
 * returns a string of stars (asterisks) 2^n long (i.e., 2 to the nth power). 
+* You should throw an IllegalArgumentException if passed a value less than 0. 
 */
 
 public static String starString(int n) {
