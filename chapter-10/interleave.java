@@ -6,14 +6,13 @@
 */
 
 public static void interleave(ArrayList<Integer> a1, ArrayList<Integer> a2) {
-    int times = Math.min(a1.size(), a2.size());
-    int i;
+    int comSize = Math.min(a1.size(), a2.size());
     
-    for (i = 0; i < times; i++) {
+    for (i = 0; i < comSize; i++) {
         a1.add(2 * i + 1, a2.get(i));
     }
     
-    for (int j = i; j < a2.size(); j++) {
+    for (int j = comSize; j < a2.size(); j++) {
         a1.add(a2.get(j));
     }
 
