@@ -8,16 +8,17 @@
 */
 
 public static void waysToClimb(int n) {
-    waysToClimb(n, 0, "[");
+    if (n > 0) {
+        waysToClimb(n, 0, "[");
+    }
 }
 
 private static void waysToClimb(int n, int position, String result) {
-    if (n == position) {
-        int index = result.lastIndexOf(",");
-        if (index != -1) {
-            result = result.substring(0, index) + "]";
-            System.out.println(result);
-        }
+    if (n - 1 == position) {
+        System.out.println(result + "1]");
+    } else if (n - 2 == position) {
+        waysToClimb(n, position + 1, result + "1, ");
+        System.out.println(result + "2]");
     } else if (n > position) {
         waysToClimb(n, position + 1, result + "1, ");
         waysToClimb(n, position + 2, result + "2, ");
