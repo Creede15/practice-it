@@ -7,32 +7,64 @@
 
 public static boolean isMagicSquare(int[][] array) {
     boolean result = true;
-    
+
     for (int row = 0; row < array.length; row++) {
         if (array[row].length != array.length) {
             result = false;
         }
     }
-    
+
     if (result) {
         int sum = 0;
-        
+        int newSum = 0;
+
         for (int col = 0; col < array.length; col++) {
             sum += array[0][col];
         }
-        
+
+        // checking rows
         for (int row = 1; row < array.length; row++) {
-            int newSum = 0;
-            
-            for (int col = 0; col < array[row].length; col++) {
+
+            for (int col = 0; col < array.length; col++) {
                 newSum += array[row][col];
             }
-            
+
             if (sum != newSum) {
                 result = false;
             }
+            newSum = 0;
+        }
+
+        // checking columns
+        for (int col = 0; col < array.length; col++) {
+
+            for (int row = 0; row < array.length; row++) {
+                newSum += array[row][col];
+            }
+
+            if (sum != newSum) {
+                result = false;
+            }
+            newSum = 0;
+        }
+
+        // checking diagonal tl - br
+        for (int row = 0; row < array.length; row++) {
+            newSum += array[row][row];
+        }
+        if (sum != newSum) {
+            result = false;
+        }
+        newSum = 0;
+
+        // checking diagonal bl - tr
+        for (int row = 0; row < array.length; row++) {
+            newSum += array[(array.length - 1) - row][row];
+        }
+        if (sum != newSum) {
+            result = false;
         }
     }
-        
+
     return result;
 }
