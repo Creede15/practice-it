@@ -1,0 +1,11 @@
+public static String stutter(String s) {
+	int length = s.length();
+    int n = 2;
+    String news = "";
+    for (int i = 0; i < length ; i++){
+        for (int j = 1; j<=n ; j++){
+            news += s.charAt(i);
+        }
+    }
+    return news;
+}
