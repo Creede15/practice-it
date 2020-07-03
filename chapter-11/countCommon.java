@@ -5,6 +5,7 @@
 */
 
 public static int countCommon(List<Integer> list1, List<Integer> list2) {
+    /*
     Set<Integer> set = new HashSet<Integer>(list1);
     Iterator<Integer> i = set.iterator();
     int count = 0;
@@ -16,4 +17,10 @@ public static int countCommon(List<Integer> list1, List<Integer> list2) {
     }
     
     return count;
+    */
+    Set<Integer> s1 = new HashSet<>(list1);
+    Set<Integer> s2 = new HashSet<>(list2);
+    s1.retainAll(s2);
+    
+    return s1;
 }
