@@ -4,3 +4,7 @@
 */
 
 System.out.print("/ \\ // \\\\ /// \\\\\\");
+// To Print Forword Slash
+System.out.print("\\");
+// To Print BackSlash
+System.out.println("\/");
